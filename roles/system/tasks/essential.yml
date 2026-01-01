@@ -1,0 +1,12 @@
+- name: Update packages
+  ansible.builtin.apt:
+    cache_valid_time: 3600
+    upgrade: yes
+
+- name: Install essential packages
+  ansible.builtin.apt: 
+    name: "{{ packages }}"
+    state: latest
+
+
+

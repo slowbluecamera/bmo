@@ -1,0 +1,15 @@
+# root@bmo:~# blkid /dev/sda1
+# /dev/sda1: LABEL="External2TB" UUID="FFF9-D047" BLOCK_SIZE="512" TYPE="exfat" 
+#  PARTLABEL="primary" PARTUUID="ffe549a4-154a-4913-9865-f7fb020125be"
+
+- name: Mount the drives
+  ansible.posix.mount:
+    src: "{{ item.src }}"
+    path: "{{ item.path }}"
+    fstype: exfat
+    opts: noatime,defaults,nofail
+    passno: 2
+    state: mounted
+  with_items:
+    - src: "LABEL=External2TB"
+      path: "/mnt/bmo2"
