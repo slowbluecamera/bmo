@@ -1,8 +1,14 @@
 ---
-- hosts: all
-  name: bmo
+- name: bmo
+  hosts: all
   become: true
+  collections:
+    - artis3n.tailscale
 
   roles:
     - role: system
       tags: system
+
+    - role: artis3n.tailscale.machine
+      tags: network
+ 

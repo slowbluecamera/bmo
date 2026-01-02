@@ -12,3 +12,5 @@ pip_install_packages:
 
 server_ip: bmo.lan
 portainer_api_url: "http://{{ server_ip }}:9000"
+
+tailscale_tags: ["server"]
