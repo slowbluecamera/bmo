@@ -11,4 +11,11 @@
 
     - role: artis3n.tailscale.machine
       tags: network
- 
+
+    - role: geerlingguy.pip
+      tags: pip
+
+    - role: docker
+      tags:
+        - docker
+        - dockercore
