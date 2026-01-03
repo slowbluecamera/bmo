@@ -19,3 +19,8 @@
       tags:
         - docker
         - dockercore
+
+    - role: portainer
+      tags:
+        - docker
+        - portainer
