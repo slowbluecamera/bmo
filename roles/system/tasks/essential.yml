@@ -4,9 +4,6 @@
     upgrade: yes
 
 - name: Install essential packages
-  ansible.builtin.apt: 
-    name: "{{ packages }}"
+  ansible.builtin.apt:
+    name: "{{ system_packages }}"
     state: latest
-
-
-

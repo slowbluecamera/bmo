@@ -7,7 +7,7 @@
     mode: '0755'
 
 - name: Create portainer container
-  docker_container:
+  community.docker.docker_container:
     name: portainer
     image: portainer/portainer-ce
     state: started
@@ -21,7 +21,7 @@
 
 
 - name: Create admin account in Portainer ("{{ portainer_admin_user }}")
-  uri:
+  ansible.builtin.uri:
     url: "{{ portainer_api_url }}/api/users/admin/init"
     method: POST
     body_format: json

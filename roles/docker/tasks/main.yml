@@ -1,13 +1,12 @@
 ---
 - name: Install docker
   ansible.builtin.include_role:
-      name: geerlingguy.docker
+    name: geerlingguy.docker
   vars:
     docker_apt_gpg_key: https://download.docker.com/linux/debian/gpg
     docker_apt_repository: deb https://download.docker.com/linux/debian bookworm stable
-  
 
-- name: Create /appdata in the user home directry
+- name: Create /appdata in the user home directory
   ansible.builtin.file:
     path: "/home/{{ ansible_user }}/appdata"
     state: directory
@@ -15,8 +14,7 @@
     group: "{{ ansible_user }}"
     mode: '0755'
 
-
-- name: Create /appdata directry
+- name: Create /appdata directory
   ansible.builtin.file:
     path: "/appdata"
     state: directory
@@ -24,8 +22,7 @@
     group: "{{ ansible_user }}"
     mode: '0755'
 
-
-- name: "Mount /appdata from home {{ansible_user}} folder"
+- name: "Mount /appdata from home {{ansible_user}}"
   tags: bind
   ansible.posix.mount:
     src: "/home/{{ ansible_user }}/appdata"

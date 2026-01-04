@@ -1,5 +1,4 @@
-packages:
+system_packages:
   - set these in the group_vars/all/vars.yml?
 
-shell: /bin/bash
-ssh_port: 22
+system_shell: /bin/bash

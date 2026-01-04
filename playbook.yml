@@ -1,9 +1,7 @@
 ---
-- name: bmo
+- name: BMO
   hosts: all
   become: true
-  collections:
-    - artis3n.tailscale
 
   roles:
     - role: system

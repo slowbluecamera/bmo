@@ -1,5 +1,5 @@
 # root@bmo:~# blkid /dev/sda1
-# /dev/sda1: LABEL="External2TB" UUID="FFF9-D047" BLOCK_SIZE="512" TYPE="exfat" 
+# /dev/sda1: LABEL="External2TB" UUID="FFF9-D047" BLOCK_SIZE="512" TYPE="exfat"
 #  PARTLABEL="primary" PARTUUID="ffe549a4-154a-4913-9865-f7fb020125be"
 
 - name: Mount the drives
