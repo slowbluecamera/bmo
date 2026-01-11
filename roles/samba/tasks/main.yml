@@ -1,0 +1,30 @@
+---
+
+- name: Add samba users
+  ansible.builtin.user:
+    name: "{{ item }}"
+    groups: users, samba
+    append: true
+  loop:
+    - guest
+
+- name: Setup samba shares
+  ansible.builtin.include_role:
+    name: vladgh.samba.server
+  vars:
+    samba_apple_extensions: yes
+    samba_shares:
+      - name: VIDEO
+        comment: VIDEO
+        path: /mnt/bmo2/VIDEO
+        browsable: yes
+        write_list: +samba,{{ ansible_user }}
+        group: samba
+        hide_special_files: yes
+        follow_symlinks: yes
+        hide_dot_files: no
+    samba_users:
+      - name: "{{ ansible_user }}"
+        password: "{{ samba_password }}"
+      - name: guest
+        password: guest

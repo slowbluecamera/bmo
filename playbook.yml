@@ -7,6 +7,9 @@
     - role: system
       tags: system
 
+    - role: samba
+      tags: samba
+
     - role: artis3n.tailscale.machine
       tags: network
 

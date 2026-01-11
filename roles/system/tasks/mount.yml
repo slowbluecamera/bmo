@@ -7,9 +7,7 @@
     src: "{{ item.src }}"
     path: "{{ item.path }}"
     fstype: exfat
-    opts: noatime,defaults,nofail
+    opts: noatime,defaults,nofail,gid=samba,fmask=0002,dmask=0002
     passno: 2
     state: mounted
-  with_items:
-    - src: "LABEL=External2TB"
-      path: "/mnt/bmo2"
+  with_items:  "{{ system_mounts }}"

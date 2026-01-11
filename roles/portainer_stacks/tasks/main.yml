@@ -10,7 +10,6 @@
     directories: "{{ item.dirs }}"
     templates: "{{ item.templates }}"
   with_items:
-
     - name: caddy
       templates:
         - Caddyfile

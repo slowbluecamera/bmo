@@ -4,10 +4,11 @@ system_packages:
   - exfatprogs
   - curl
   - systemd-resolved
+  - samba
 
-mounts:
-  - src: /dev/sda1
-    path: /mnt/bmo2
+system_mounts:
+  - src: "LABEL=External2TB"
+    path: "/mnt/bmo2"
 
 pip_install_packages:
   - name: docker
