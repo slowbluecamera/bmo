@@ -1,9 +1,9 @@
 - name: Update packages
   ansible.builtin.apt:
     cache_valid_time: 3600
-    upgrade: yes
+    upgrade: yes # noqa - yaml[truthy]
 
 - name: Install essential packages
   ansible.builtin.apt:
     name: "{{ system_packages }}"
-    state: latest
+    state: latest # noqa - package-latest

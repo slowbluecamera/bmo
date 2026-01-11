@@ -1,0 +1,3 @@
+ansible_user_password: xxxx
+tailscale_authkey: tskey-auth-xxx
+portainer_admin_password: xxx

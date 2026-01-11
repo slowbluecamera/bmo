@@ -1,0 +1,14 @@
+version: "2.10.2"
+services:
+  caddy:
+    image: caddy:2
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - 443:443
+    volumes:
+      - /appdata/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - /appdata/caddy/data:/data
+      - /appdata/caddy/config:/config
+      - /appdata/caddy/site:/site
+      - /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock   

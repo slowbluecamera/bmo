@@ -6,3 +6,6 @@ essential:
 
 install:
 	ansible-galaxy collection install -r requirements.yml
+
+stacks:
+	ansible-playbook playbook.yml -i inventory --tags stacks

@@ -3,6 +3,7 @@ system_packages:
   - exfat-fuse
   - exfatprogs
   - curl
+  - systemd-resolved
 
 mounts:
   - src: /dev/sda1
@@ -11,10 +12,9 @@ mounts:
 pip_install_packages:
   - name: docker
 
-portainer_server_ip: bmo.lan
+portainer_server_ip: bmo.cassowary-harmonic.ts.net
 portainer_api_url: "http://{{ portainer_server_ip }}:9000"
 portainer_admin_user: admin
-#portainer_admin_password: (vault)
 portainer_endpoint_id: "3"
 
 tailscale_tags: ["server"]

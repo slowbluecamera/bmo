@@ -22,3 +22,7 @@
       tags:
         - docker
         - portainer
+
+    - role: portainer_stacks
+      tags:
+        - stacks

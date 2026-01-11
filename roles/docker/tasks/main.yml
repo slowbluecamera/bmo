@@ -22,7 +22,7 @@
     group: "{{ ansible_user }}"
     mode: '0755'
 
-- name: "Mount /appdata from home {{ansible_user}}"
+- name: "Mount /appdata from home {{ ansible_user }}"
   tags: bind
   ansible.posix.mount:
     src: "/home/{{ ansible_user }}/appdata"

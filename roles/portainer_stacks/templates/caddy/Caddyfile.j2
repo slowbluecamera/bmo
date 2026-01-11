@@ -1,0 +1,11 @@
+{
+    servers {
+        trusted_proxies static 100.64.0.0/10
+    }
+}
+
+{{ caddy_hostname }}.{{ caddy_domain }} {
+    file_server browse {
+        root /site
+    }
+}

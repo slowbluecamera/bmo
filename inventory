@@ -1,5 +1,5 @@
 [homelab]
-bmo.lan
+bmo.cassowary-harmonic.ts.net
 
 [all:vars]
 ansible_user=david
