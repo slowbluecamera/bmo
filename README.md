@@ -1,6 +1,6 @@
 # bmo
 
-<img alt="bmo the homelab" src="./roles/portainer_stacks/files/caddy/site/BMO.png" width="50%">
+![bmo the homelab](./roles/portainer_stacks/files/caddy/site/BMO.png)
 
 Ansible playbook to setup my homelab server named "bmo"
 
@@ -25,7 +25,7 @@ I'm trying to run as much as possible as Docker containers.
 
 I also decided to try out running Portainer instead of docker-compose. It is a little less straightforward to configure, but the management console is handy. We'll see how it goes.
 
-<img alt="BMO design diagram" src="./bmo-design.png" width="50%">
+![BMO design diagram](./bmo-design.png)
 
 So services running natively include:
 - Docker
