@@ -81,7 +81,7 @@
   loop: "{{ files }}"
   loop_control:
     loop_var: file
-  when: files is defined and files | length > 0 and stack_not_exists
+  when: files is defined and files | length > 0
 
 - name: "{{ stack_name }} Generate files from templates (if any)"
   ansible.builtin.template:

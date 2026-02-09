@@ -8,6 +8,7 @@
     stack_name: "{{ item.name }}"
     stack_compose: "{{ lookup('ansible.builtin.template', role_path + '/templates/' + item.name + '.yml') }}"
     directories: "{{ item.dirs }}"
+    files: "{{ item.files }}"
     templates: "{{ item.templates }}"
   with_items:
     - name: caddy
@@ -19,3 +20,6 @@
       dirs:
         - config
         - cache
+    - name: navidrome
+      dirs:
+        - data

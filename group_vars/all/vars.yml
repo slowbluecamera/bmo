@@ -24,3 +24,6 @@ portainer_admin_user: admin
 portainer_endpoint_id: "3"
 
 tailscale_tags: ["server"]
+
+caddy_hostname: bmo
+caddy_domain: cassowary-harmonic.ts.net
