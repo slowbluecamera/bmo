@@ -10,6 +10,8 @@ system_packages:
   - curl
   - systemd-resolved
   - samba
+  - zip
+  - unzip
 
 system_mounts:
   - src: "LABEL=External2TB"

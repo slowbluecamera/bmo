@@ -23,6 +23,24 @@
         hide_special_files: yes
         follow_symlinks: yes
         hide_dot_files: no
+      - name: MUSIC
+        comment: MUSIC
+        path: /mnt/bmo2/MUSIC
+        browsable: yes
+        write_list: +samba,{{ ansible_user }}
+        group: samba
+        hide_special_files: yes
+        follow_symlinks: yes
+        hide_dot_files: no
+      - name: PHOTOS
+        comment: PHOTOS
+        path: /mnt/bmo2/PHOTOS
+        browsable: yes
+        write_list: +samba,{{ ansible_user }}
+        group: samba
+        hide_special_files: yes
+        follow_symlinks: yes
+        hide_dot_files: no
     samba_users:
       - name: "{{ ansible_user }}"
         password: "{{ samba_password }}"
