@@ -23,3 +23,7 @@
     - name: navidrome
       dirs:
         - data
+    - name: immich
+      dirs:
+        - data
+        - postgres
